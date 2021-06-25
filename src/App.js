@@ -23,10 +23,7 @@ function App() {
       setCityData(result.data);
       setErrMessage(null);
       })
-      .catch((err)=>{
-        console.log(err);
-      })
-      .then(()=>{
+      .catch(()=>{
         setErrMessage('Could Not Find City.')
       })
     };
@@ -34,6 +31,7 @@ function App() {
   };
 
   const classes = Styles();
+  console.log(errMessage)
   return (
     <div className='App'>
       <Paper className={classes.paperContainer}>
