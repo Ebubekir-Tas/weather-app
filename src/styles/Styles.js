@@ -14,7 +14,9 @@ export const Styles = makeStyles((theme) => ({
     color: theme.palette.secondary.main
   },
   textField: {
-    color: theme.palette.secondary.main,
+    '&&': {
+      color: theme.palette.secondary.main,
+    }
   },
   toggleButton: {
     color: theme.palette.secondary.main,
