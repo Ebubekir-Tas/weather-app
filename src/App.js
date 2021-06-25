@@ -31,7 +31,6 @@ function App() {
   };
 
   const classes = Styles();
-  console.log(errMessage)
   return (
     <div className='App'>
       <Paper className={classes.paperContainer}>
