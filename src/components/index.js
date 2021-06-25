@@ -1,3 +1,3 @@
 // All exports in current folder
-export * from './DisplayWeather';
+export * from './display-weather';
 export * from './WeatherForm';

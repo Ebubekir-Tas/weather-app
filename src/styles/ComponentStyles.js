@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-export const WeatherFormStyles = makeStyles((theme) => ({
+export const ComponentStyles = makeStyles((theme) => ({
   btn: {
     backgroundColor: theme.palette.primary.main,
     color: '#fff',

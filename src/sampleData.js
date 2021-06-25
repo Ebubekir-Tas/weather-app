@@ -1,6 +1,6 @@
 // Sample data object for testing due to API call limit on free version
 
-export const data = {
+export const sampleData = {
     cod: "200",
     message: 0,
     cnt: 40,
