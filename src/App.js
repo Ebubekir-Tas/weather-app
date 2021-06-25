@@ -9,6 +9,7 @@ const axios = require('axios');
 function App() {
   // Data of City searched for
   const [cityData, setCityData] = useState(null);
+  const [errMessage, setErrMessage] = useState(null);
 
   // API key
   const WEATHER_API_KEY = `${process.env.REACT_APP_WEATHER_API_KEY}`;
@@ -16,10 +17,18 @@ function App() {
   // Fetch API on submit of weather form. Lifted state passed to components.
   const onSubmit = (val) => {
     const fetchData = async () => {
-      const result = await axios(
+      await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${val}&units=imperial&appid=${WEATHER_API_KEY}`
-      );
+      ).then((result) => {
       setCityData(result.data);
+      setErrMessage(null);
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
+      .then(()=>{
+        setErrMessage('Could Not Find City.')
+      })
     };
     fetchData();
   };
@@ -33,6 +42,8 @@ function App() {
           // submit handler for API fetch
           submitHandler={onSubmit}
         />
+        {/* Custom error message */}
+        {errMessage}
         {/* Weather UI */}
         <DisplayWeather
           cityData={cityData}
