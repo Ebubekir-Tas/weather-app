@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-export const ComponentStyles = makeStyles((theme) => ({
+export const Styles = makeStyles((theme) => ({
   btn: {
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.secondary.main,
@@ -21,9 +21,16 @@ export const ComponentStyles = makeStyles((theme) => ({
   textField: {
     color: theme.palette.secondary.main,
   },
+  toggleButton: {
+    color: theme.palette.secondary.main,
+    margin: theme.spacing(2),
+    background: 'linear-gradient(to right bottom, rgb(255,255,255, .1), rgb(255,255,255, 0.2))',
+    width: '25%'
+  },
   weatherCard: {
     padding: theme.spacing(2),
-    background: 'linear-gradient(to right bottom, rgb(255,255,255, .05), rgb(255,255,255, 0.15))'
+    background: 'linear-gradient(to right bottom, rgb(255,255,255, .05), rgb(255,255,255, 0.15))',
+    width: '14%'
   },
   weatherContainer: {
     display: 'flex',

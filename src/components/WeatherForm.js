@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ComponentStyles } from '../styles/ComponentStyles';
+import { Styles } from '../styles/Styles';
 import { IconButton, TextField } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 import { useFormik } from 'formik';
@@ -9,7 +9,7 @@ export function WeatherForm() {
   const [searchCity, setSearchCity] = useState('');
   // Check if input value is empty
   const [inputValueBool, setInputValueBool] = useState(false);
-  const classes = ComponentStyles();
+  const classes = Styles();
 
   // API keys
   const WEATHER_API_KEY = `${process.env.REACT_APP_WEATHER_API_KEY}`;

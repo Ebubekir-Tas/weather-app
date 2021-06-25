@@ -1,10 +1,10 @@
 import './App.css';
 import { Paper } from '@material-ui/core';
 import { WeatherForm, DisplayWeather } from './components';
-import { ComponentStyles } from './styles/ComponentStyles';
+import { Styles } from './styles/Styles';
 
 function App() {
-  const classes = ComponentStyles();
+  const classes = Styles();
   return (
     <div className='App'>
       <Paper className={classes.paperContainer}>

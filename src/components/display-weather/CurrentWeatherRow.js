@@ -1,11 +1,11 @@
 import React from 'react';
 import { Paper } from '@material-ui/core';
-import { ComponentStyles } from '../../styles/ComponentStyles';
+import { Styles } from '../../styles/Styles';
 
 export const CurrentWeatherRow = ({ data }) => {
   const forecastDate = new Date(data.dt * 1000).toLocaleDateString();
   const forecastTime = new Date(data.dt * 1000).toLocaleTimeString([], { timeStyle: 'short' });
-  const classes = ComponentStyles();
+  const classes = Styles();
 
   return (
     <Paper className={classes.weatherCard}>
