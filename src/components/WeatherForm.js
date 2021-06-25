@@ -11,16 +11,17 @@ export function WeatherForm() {
   const [inputValueBool, setInputValueBool] = useState(false);
   const classes = ComponentStyles();
 
+  // API keys
   const WEATHER_API_KEY = `${process.env.REACT_APP_WEATHER_API_KEY}`;
   const APIURL = `api.openweathermap.org/data/2.5/forecast?q=${searchCity}&appid=${WEATHER_API_KEY}`;
 
+  // Formik values
   const weatherForm = useFormik({
     initialValues: {
       city: ''
     },
     onSubmit: e => {
       setSearchCity(e.city);
-      console.log('test')
     }
   });
 
