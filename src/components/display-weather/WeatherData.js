@@ -21,7 +21,7 @@ export const WeatherDataRow = ({ data, toggleWeatherView }) => {
           {/* Temperature */}
           <div className={classes.weatherInfo}>{data.main.temp}°F</div>
           {/* Icon of weather conditions */}
-          <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt='weather' />
+          <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt='weather' />
           {/* Text of weather conditions */}
           <div className={classes.weatherInfo}>{data.weather[0].description}</div>
         </>
