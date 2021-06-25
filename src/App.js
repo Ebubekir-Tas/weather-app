@@ -1,6 +1,5 @@
 import './App.css';
-import { WeatherForm } from './components/WeatherForm';
-import { DisplayWeather } from './components/DisplayWeather';
+import { WeatherForm, DisplayWeather } from './components';
 
 function App() {
   return (
