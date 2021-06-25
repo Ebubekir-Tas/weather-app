@@ -54,7 +54,7 @@ export function WeatherForm() {
             endAdornment:
               <IconButton type='submit'>
                 {/* Styled only if textfield has user input */}
-                <Search className={inputValueBool && classes.searchIcon} />
+                <Search className={inputValueBool ? classes.searchIcon : null} />
               </IconButton>
           }}
         />
