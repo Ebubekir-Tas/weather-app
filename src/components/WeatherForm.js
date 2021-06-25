@@ -27,8 +27,8 @@ export function WeatherForm() {
 
   return (
     <div>
-      <form 
-        onSubmit={weatherForm.handleSubmit} 
+      <form
+        onSubmit={weatherForm.handleSubmit}
         className={classes.formStyles}
       >
         {/* Search City Text Field */}
@@ -51,7 +51,7 @@ export function WeatherForm() {
           InputProps={{
             className: classes.textField,
             // Search icon in text field.
-            endAdornment: 
+            endAdornment:
               <IconButton type='submit'>
                 {/* Styled only if textfield has user input */}
                 <Search className={inputValueBool && classes.searchIcon} />

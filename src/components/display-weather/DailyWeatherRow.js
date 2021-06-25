@@ -5,7 +5,7 @@ import { ComponentStyles } from '../../styles/ComponentStyles';
 export const DailyWeatherRow = ({ data }) => {
   const forecastDate = new Date(data.dt * 1000).toLocaleDateString();
   const forecastDay = new Date(data.dt * 1000).getDay();
-  const daysOfWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const classes = ComponentStyles();
 
   return (
