@@ -1,4 +1,5 @@
 import React from 'react';
+import { Paper } from '@material-ui/core';
 import { ComponentStyles } from '../../styles/ComponentStyles'
 
 export const DailyWeatherRow = ({ data }) => {
@@ -6,11 +7,12 @@ export const DailyWeatherRow = ({ data }) => {
   const classes = ComponentStyles();
 
   return (
-    <div>
-      <div>description: {data.weather[0].description}</div>
-      temp: {data.main.temp}
-      <div>date: {forecastDate.toString()}</div>
+    <Paper className={classes.weatherCard}>
+      <div className={classes.weatherInfoDate}>{forecastDate.toString()}</div>
+      <div className={classes.weatherInfo}>{data.main.temp}°F</div>
       <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather" />
-    </div>
+      <div className={classes.weatherInfo}>{data.weather[0].description}</div>
+
+    </Paper>
   );
 };

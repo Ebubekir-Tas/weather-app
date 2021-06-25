@@ -1,12 +1,16 @@
 import './App.css';
+import { Paper } from '@material-ui/core';
 import { WeatherForm, DisplayWeather } from './components';
+import { ComponentStyles } from './styles/ComponentStyles';
 
 function App() {
+  const classes = ComponentStyles();
   return (
     <div className="App">
-      <h1>Weather</h1>
-      <WeatherForm />
-      <DisplayWeather />
+      <Paper className={classes.paperContainer}>
+        <WeatherForm />
+        <DisplayWeather />
+      </Paper>
     </div>
   );
 }

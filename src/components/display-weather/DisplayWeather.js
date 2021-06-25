@@ -9,12 +9,12 @@ export function DisplayWeather() {
   const classes = ComponentStyles();
   return (
     <div>
-      <h1>
-        Weather in {sampleData.city.name}:
+      <h1 className={classes.weatherHeader}>
+        Weather in {sampleData.city.name}, {sampleData.city.country}:
       </h1>
       <div className={classes.weatherContainer}>
-      {dailyWeather && dailyWeather.map(data => (
-        <DailyWeatherRow data={data} />
+      {dailyWeather && dailyWeather.map((data, i) => (
+        <DailyWeatherRow data={data} key={`${data}${i}`} />
       ))
       }
       </div>
