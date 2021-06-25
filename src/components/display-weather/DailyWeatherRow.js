@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentStyles } from '../../styles/ComponentStyles'
 
 export const DailyWeatherRow = ({ data }) => {
@@ -5,12 +6,11 @@ export const DailyWeatherRow = ({ data }) => {
   const classes = ComponentStyles();
 
   return (
-    <div className={classes.weatherContainer}>
+    <div>
       <div>description: {data.weather[0].description}</div>
       temp: {data.main.temp}
       <div>date: {forecastDate.toString()}</div>
       <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt="weather" />
-      <hr />
     </div>
   );
 };

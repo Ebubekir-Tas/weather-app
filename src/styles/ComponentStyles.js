@@ -6,4 +6,8 @@ export const ComponentStyles = makeStyles((theme) => ({
     color: '#fff',
     margin: theme.spacing(1)
   },
+  weatherContainer: {
+    display: 'flex',
+    justifyContent: 'space-between'
+  }
 }))
