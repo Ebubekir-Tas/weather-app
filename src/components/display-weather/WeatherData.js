@@ -32,7 +32,7 @@ export const WeatherDataRow = ({ data, toggleWeatherView }) => {
             {forecastDate.toString()} - {toggleWeatherView ? daysOfWeek[forecastDay] : forecastTime.toString()}
           </div>
           <div className={classes.weatherInfo}>{data.main.temp}°F</div>
-          <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt='weather' />
+          <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt='weather' />
           <div className={classes.weatherInfo}>{data.weather[0].description}</div>
         </>
       }
