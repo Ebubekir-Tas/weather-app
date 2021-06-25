@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
 import { Styles } from '../../styles/Styles';
-import { WeatherDataRow } from './WeatherData'
+import { WeatherDataRow } from './WeatherData';
 
 export function DisplayWeather({ cityData }) {
   const [toggleWeatherView, setToggleWeatherView] = useState(true);
