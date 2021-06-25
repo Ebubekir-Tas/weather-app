@@ -11,21 +11,26 @@ export function DisplayWeather() {
   const classes = ComponentStyles();
   return (
     <div>
+      {/* Display Location */}
       <h1 className={classes.weatherHeader}>
         {sampleData.city.name}, {sampleData.city.country}
       </h1>
+
+      {/* Forecast of current day */}
       <div className={classes.weatherContainer}>
-      {currentWeather && currentWeather.map((data, i) => (
-        <CurrentWeatherRow data={data} key={`${data}${i}`} />
-      ))
-      }
+        {currentWeather && currentWeather.map((data, i) => (
+          <CurrentWeatherRow data={data} key={`${data}${i}`} />
+        ))
+        }
       </div >
+
+      {/* Forecast of next 5 days */}
       <div className={classes.weatherContainer}>
-      {dailyWeather && dailyWeather.map((data, i) => (
-        <DailyWeatherRow data={data} key={`${data}${i}`} />
-      ))
-      }
+        {dailyWeather && dailyWeather.map((data, i) => (
+          <DailyWeatherRow data={data} key={`${data}${i}`} />
+        ))
+        }
       </div>
     </div>
-  )
+  );
 };

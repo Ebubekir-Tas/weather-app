@@ -15,6 +15,9 @@ export const ComponentStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     background: 'linear-gradient(to right bottom, rgb(000,000,000, .1), rgb(255,255,255, 0.2))'
   },
+  searchIcon: {
+    color: theme.palette.secondary.main
+  },
   textField: {
     color: theme.palette.secondary.main,
   },
@@ -36,4 +39,4 @@ export const ComponentStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
     fontWeight: 500
   }
-}))
+}));

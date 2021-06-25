@@ -6,13 +6,15 @@ import { ComponentStyles } from './styles/ComponentStyles';
 function App() {
   const classes = ComponentStyles();
   return (
-    <div className="App">
+    <div className='App'>
       <Paper className={classes.paperContainer}>
+        {/* User Input */}
         <WeatherForm />
+        {/* Weather UI */}
         <DisplayWeather />
       </Paper>
     </div>
   );
-}
+};
 
 export default App;
