@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@material-ui/core';
-import { DailyWeatherRow } from './DailyWeatherRow';
-import { CurrentWeatherRow } from './CurrentWeatherRow';
 import { Styles } from '../../styles/Styles';
+import { WeatherDataRow } from './WeatherData'
 
 export function DisplayWeather({ cityData }) {
   const [toggleWeatherView, setToggleWeatherView] = useState(true);
   const [dailyWeather, setDailyWeather] = useState('');
-  const [currentWeather, setCurrentWeather] = useState('');
+  const [hourlyWeather, setHourlyWeather] = useState('');
   const classes = Styles();
 
   // Set custom weather data options based on city data
   useEffect(() => {
     cityData &&
       setDailyWeather(cityData?.list.filter((element, index) => index % 8 === 0));
-    setCurrentWeather(cityData?.list.filter((element, index) => index < 5));
+    setHourlyWeather(cityData?.list.filter((element, index) => index < 5));
   }, [cityData]);
   return (
     <div>
@@ -30,15 +29,15 @@ export function DisplayWeather({ cityData }) {
         // Forecast of next 5 days 
         <div className={classes.weatherContainer}>
           {dailyWeather && dailyWeather.map((data, i) => (
-            <DailyWeatherRow data={data} key={`${data}${i}`} />
+            <WeatherDataRow data={data} key={`${data}${i}`} />
           ))
           }
         </div>
         :
         //Forecast of current day 
         <div className={classes.weatherContainer}>
-          {currentWeather && currentWeather.map((data, i) => (
-            <CurrentWeatherRow data={data} key={`${data}${i}`} />
+          {hourlyWeather && hourlyWeather.map((data, i) => (
+            <WeatherDataRow data={data} key={`${data}${i}`} />
           ))
           }
         </div >

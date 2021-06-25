@@ -30,11 +30,20 @@ export const Styles = makeStyles((theme) => ({
   weatherCard: {
     padding: theme.spacing(2),
     background: 'linear-gradient(to right bottom, rgb(255,255,255, .05), rgb(255,255,255, 0.15))',
-    width: '14%'
+    width: '14%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      width: '75vw',
+      justifyContent: 'space-between',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
   },
   weatherContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
   },
   weatherHeader: {
     color: theme.palette.secondary.main
