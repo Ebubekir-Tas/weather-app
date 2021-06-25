@@ -4,9 +4,8 @@ import { IconButton, TextField } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 import { useFormik } from 'formik';
 
-export function WeatherForm({ APIURL, submitHandler }) {
+export function WeatherForm({ submitHandler }) {
   // Value of city searched
-  // const [searchCity, setSearchCity] = useState('');
   // Check if input value is empty
   const [inputValueBool, setInputValueBool] = useState(false);
   const classes = Styles();
@@ -17,13 +16,11 @@ export function WeatherForm({ APIURL, submitHandler }) {
       city: ''
     },
     onSubmit: val => {
-      // setSearchCity(e.city);
       submitHandler(val.city);
     }
   });
   return (
     <div>
-      {APIURL}
       <form
         onSubmit={weatherForm.handleSubmit}
         className={classes.formStyles}

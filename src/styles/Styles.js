@@ -1,11 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
 export const Styles = makeStyles((theme) => ({
-  btn: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.secondary.main,
-    margin: theme.spacing(1)
-  },
   formStyles: {
     display: 'flex',
     justifyContent: 'center',
@@ -25,18 +20,22 @@ export const Styles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
     margin: theme.spacing(2),
     background: 'linear-gradient(to right bottom, rgb(255,255,255, .1), rgb(255,255,255, 0.2))',
-    width: '25%'
+    width: '25%',
+    [theme.breakpoints.down('xs')]: {
+      width: '50%'
+    }
   },
   weatherCard: {
     padding: theme.spacing(2),
     background: 'linear-gradient(to right bottom, rgb(255,255,255, .05), rgb(255,255,255, 0.15))',
     width: '14%',
     [theme.breakpoints.down('sm')]: {
-      display: 'flex',
       width: '75vw',
       justifyContent: 'space-between',
       marginLeft: 'auto',
-      marginRight: 'auto'
+      marginRight: 'auto',
+      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(2)
     }
   },
   weatherContainer: {

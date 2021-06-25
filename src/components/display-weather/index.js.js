@@ -29,7 +29,7 @@ export function DisplayWeather({ cityData }) {
         // Forecast of next 5 days 
         <div className={classes.weatherContainer}>
           {dailyWeather && dailyWeather.map((data, i) => (
-            <WeatherDataRow data={data} key={`${data}${i}`} />
+            <WeatherDataRow data={data} key={`${data}${i}`} toggleWeatherView={toggleWeatherView} />
           ))
           }
         </div>
@@ -37,7 +37,7 @@ export function DisplayWeather({ cityData }) {
         //Forecast of current day 
         <div className={classes.weatherContainer}>
           {hourlyWeather && hourlyWeather.map((data, i) => (
-            <WeatherDataRow data={data} key={`${data}${i}`} />
+            <WeatherDataRow data={data} key={`${data}${i}`} toggleWeatherView={toggleWeatherView} />
           ))
           }
         </div >

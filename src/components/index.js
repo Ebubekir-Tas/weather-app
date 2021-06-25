@@ -1,3 +1,3 @@
 // All exports in current folder
-export * from './display-weather';
+export { DisplayWeather } from './display-weather/index.js';
 export * from './WeatherForm';
