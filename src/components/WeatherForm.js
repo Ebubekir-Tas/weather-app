@@ -32,6 +32,7 @@ export function WeatherForm({ submitHandler }) {
           id='city'
           name='city'
           type='text'
+          className={classes.textField}
           onChange={weatherForm.handleChange}
           value={weatherForm.values.city}
           inputRef={(input) => {
