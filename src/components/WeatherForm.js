@@ -4,29 +4,26 @@ import { IconButton, TextField } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 import { useFormik } from 'formik';
 
-export function WeatherForm() {
+export function WeatherForm({ APIURL, submitHandler }) {
   // Value of city searched
-  const [searchCity, setSearchCity] = useState('');
+  // const [searchCity, setSearchCity] = useState('');
   // Check if input value is empty
   const [inputValueBool, setInputValueBool] = useState(false);
   const classes = Styles();
-
-  // API keys
-  const WEATHER_API_KEY = `${process.env.REACT_APP_WEATHER_API_KEY}`;
-  const APIURL = `api.openweathermap.org/data/2.5/forecast?q=${searchCity}&appid=${WEATHER_API_KEY}`;
 
   // Formik values
   const weatherForm = useFormik({
     initialValues: {
       city: ''
     },
-    onSubmit: e => {
-      setSearchCity(e.city);
+    onSubmit: val => {
+      // setSearchCity(e.city);
+      submitHandler(val.city);
     }
   });
-
   return (
     <div>
+      {APIURL}
       <form
         onSubmit={weatherForm.handleSubmit}
         className={classes.formStyles}
