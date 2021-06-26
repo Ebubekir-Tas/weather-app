@@ -13,7 +13,7 @@ export function DisplayWeather({ cityData }) {
   useEffect(() => {
     cityData &&
       setDailyWeather(cityData?.list.filter((element, index) => index % 8 === 0));
-    setHourlyWeather(cityData?.list.filter((element, index) => index < 5));
+      setHourlyWeather(cityData?.list.filter((element, index) => index < 5));
   }, [cityData]);
   return (
     <div>
